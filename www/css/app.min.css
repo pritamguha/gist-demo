@@ -1,0 +1,17 @@
+.pointer {
+  cursor: pointer; }
+
+.mt10 {
+  margin-top: 10px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.heading-container {
+  height: 100px;
+  padding: 20px 0; }
+  .heading-container h2 {
+    width: 50% !important;
+    float: left; }
+  .heading-container label {
+    float: right; }

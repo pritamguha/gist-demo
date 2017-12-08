@@ -1,0 +1,25 @@
+<div class="container" ng-init='init()'>
+    <div class="heading-container">
+        <h2>List Of Gist Users</h2>
+        <label>Search by Owner or Description
+            <input class="form-control mt10" ng-model='searchText' placeholder="Search here...">
+        </label>
+    </div>
+    <table class="table table-bordered table-striped table-hover  mt20">
+        <thead>
+            <tr>
+                <th width="150">Owner</th>
+                <th>Description</th>
+                <th width="200">Last updated</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="pointer" ng-repeat='item in gists | filter:searchText' ng-if='showPaginateUsers($index)' ng-click='showDetails(item)'>
+                <td>{{item.owner.login || 'N/A'}}</td>
+                <td>{{item.description || 'No Description'}}</td>
+                <td>{{item.updated_at | date : "dd/MM/yyyy"}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <ul class="pull-right" uib-pagination total-items="totalItems" ng-model="cfg.currentPage" items-per-page='cfg.rowsPerPage' ng-change="pageChanged()"></ul>
+</div>
