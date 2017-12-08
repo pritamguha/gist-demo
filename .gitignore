@@ -1,4 +1,4 @@
 
-Gist/web/node_modules
-Gist/web/bower_components
-Gist/web/www
+node_modules
+bower_components
+www
